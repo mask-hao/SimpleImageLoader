@@ -35,7 +35,7 @@ class RequestRunnable implements Runnable{
             Bitmap bitmap = mImageLoader.loadBitmap(mUrl, mReqWidth, mReqHeight);
             Log.d(TAG, "run: "+(bitmap == null?"null":"not null"));
             Log.d(TAG, "run: "+mIsCanceled);
-            if (bitmap != null) {
+            if (bitmap != null && !mIsCanceled) {
                 BitmapDrawable bitmapDrawable = new BitmapDrawable(mImageLoader.getContext().getResources(),
                         bitmap);
                 RequestResult result = new RequestResult(bitmapDrawable, imageView);

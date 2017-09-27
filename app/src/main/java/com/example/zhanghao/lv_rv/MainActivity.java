@@ -4,15 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.ImageView;
-import android.widget.ListView;
 
-import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import me.xiaopan.sketch.SketchImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -91,10 +87,5 @@ public class MainActivity extends AppCompatActivity {
         listView = (RecyclerView) findViewById(R.id.list);
         listView.setLayoutManager(new LinearLayoutManager(this));
         listView.setAdapter(new RecyclerViewAdapter(this,imageUrls));
-//        for (String imageUrl : imageUrls) {
-//            mUrls.add(imageUrl);
-//        }
-//        ListViewAdapter  adapter = new ListViewAdapter(this,mUrls);
-//        listView.setAdapter(adapter);
     }
 }
